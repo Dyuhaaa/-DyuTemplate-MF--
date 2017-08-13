@@ -1,0 +1,26 @@
+// Created by GriNAME on 30.11.2016.
+=container($state: fixed)
+  margin:
+    left: auto
+    right: auto
+  padding:
+    left: $margin / 2
+    right: $margin / 2
+
+  @if $state == fixed
+    +media-xl()
+      min-width: $xl - $margin * 3
+
+    +media-lg
+      min-width: $lg - $margin * 3
+
+    +media-md
+      min-width: $md - $margin * 3
+
+    +media-sm
+      min-width: $sm - $margin * 3
+
+    +media-xs
+      min-width: $xs - $margin * 3
+  @else if $state == fluid
+    max-width: 100%
